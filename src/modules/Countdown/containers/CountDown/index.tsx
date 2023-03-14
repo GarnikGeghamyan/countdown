@@ -61,7 +61,7 @@ const CountDown: FC = () => {
     intervalId.current = window.setInterval(() => {
       if (timerRef.current <= 1) {
         clearInterval(intervalId.current);
-        setData(prevState => ({ ...prevState, status: COUNTDOWN_STATUSES.INITIAL }));
+        setData(prevState => ({ ...prevState, status: COUNTDOWN_STATUSES.INITIAL, progress: 100 }));
         return;
       }
       setData(prevState => {
